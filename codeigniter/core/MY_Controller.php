@@ -14,7 +14,9 @@ class Widget
 
         $widget = explode('@', $widget);
         $class = $widget[0];
-        $class = strrpos($class, '/') !== false ? substr($class, 0, strrpos($class, '/')+1) . ucfirst(substr($class, strrpos($class, '/') + 1)) : ucfirst($class);
+        $class = strrpos($class, '/') !== false
+            ? substr($class, 0, strrpos($class, '/')+1) . ucfirst(substr($class, strrpos($class, '/') + 1))
+            : ucfirst($class);
         $method = $widget[1];
         $widgetFile = APPPATH .
             'widgets/' .
